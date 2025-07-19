@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho&display=swap" rel="stylesheet">
     <style>
         /* テーマカラー設定 */
         :root {
@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Shippori Mincho', serif;
-            /* 繊細な紙のテクスチャ（リンクを修正） */
+            /* 繊細な紙のテクスチャ */
             background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
             background-color: var(--color-bg);
             color: var(--color-text);
@@ -27,9 +27,9 @@
         .font-noto-serif {
             font-family: 'Noto Serif JP', serif;
         }
-        .font-handwriting {
-            /* フォントをエレガントな 'Great Vibes' に変更 */
-            font-family: 'Great Vibes', cursive;
+        .font-title {
+            /* メインタイトルのフォントを 'Alice' に変更 */
+            font-family: 'Alice', serif;
         }
         .cover-image {
             position: relative; /* 疑似要素の配置のため */
@@ -104,10 +104,12 @@
 
     <!-- メインビジュアル -->
     <header class="cover-image h-screen w-full flex flex-col items-center justify-center text-white text-center shadow-lg">
-        <div class="bg-black bg-opacity-30 p-8 md:p-12 rounded-lg fade-in">
-            <h1 class="font-handwriting text-7xl md:text-8xl" style="color: #FFF; font-weight: 400;">Our Wedding Day</h1>
-            <p class="mt-4 text-2xl md:text-3xl font-noto-serif">Kyosuke & Natsumi</p>
-            <p class="mt-2 text-lg font-noto-serif">2025.11.09</p>
+        <!-- スマホ表示を考慮してパディングを調整 -->
+        <div class="bg-black bg-opacity-30 p-6 sm:p-8 md:p-12 rounded-lg fade-in">
+            <!-- スマホ用の文字サイズを調整 -->
+            <h1 class="font-title text-5xl sm:text-6xl md:text-7xl tracking-wider" style="color: #FFF;">Our Wedding Day</h1>
+            <p class="mt-4 text-xl sm:text-2xl md:text-3xl font-noto-serif">Kyosuke & Natsumi</p>
+            <p class="mt-2 text-base sm:text-lg font-noto-serif">2025.11.09</p>
         </div>
     </header>
 
@@ -115,59 +117,64 @@
     <main class="w-full max-w-4xl mx-auto p-6 md:p-12">
 
         <!-- ご挨拶 -->
-        <section class="text-center my-16 fade-in delay-1">
-            <h2 class="font-noto-serif text-3xl font-bold text-accent mb-8 tracking-wider">GREETING</h2>
-            <p class="text-lg leading-relaxed">
-                謹啓<br>
-                秋冷の候 皆様にはお変わりなくお過ごしのことと<br>
-                お慶び申し上げます
-            </p>
-            <p class="mt-6 text-lg leading-relaxed">
-                このたび 私たちは結婚式を挙げることになりました<br>
-                つきましては 日頃お世話になっております皆様に<br>
-                感謝の気持ちを込めて ささやかな小宴を催したく存じます
-            </p>
-            <p class="mt-6 text-lg leading-relaxed">
-                ご多用中とは存じますが<br>
-                ぜひご出席賜りますよう 心よりお待ち申し上げております
-            </p>
-            <p class="mt-10 text-right text-lg">
-                中川 恭輔<br>
-                坂本 菜摘
-            </p>
+        <section class="text-center my-12 sm:my-16 fade-in delay-1">
+            <!-- スマホ用の見出しサイズと余白を調整 -->
+            <h2 class="font-noto-serif text-2xl sm:text-3xl font-bold text-accent mb-6 sm:mb-8 tracking-wider">GREETING</h2>
+            <!-- スマホ用の本文サイズと行間を調整 -->
+            <div class="text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6">
+                <p>
+                    謹啓<br>
+                    秋冷の候 皆様にはお変わりなくお過ごしのことと<br>
+                    お慶び申し上げます
+                </p>
+                <p>
+                    このたび 私たちは結婚式を挙げることになりました<br>
+                    つきましては 日頃お世話になっております皆様に<br>
+                    感謝の気持ちを込めて ささやかな小宴を催したく存じます
+                </p>
+                <p>
+                    ご多用中とは存じますが<br>
+                    ぜひご出席賜りますよう 心よりお待ち申し上げております
+                </p>
+                <p class="text-right pt-4">
+                    中川 恭輔<br>
+                    坂本 菜摘
+                </p>
+            </div>
         </section>
 
         <!-- 区切り線 -->
-        <div class="border-t-2 border-dotted border-accent/40 my-20 fade-in delay-2"></div>
+        <div class="border-t-2 border-dotted border-accent/40 my-12 sm:my-20 fade-in delay-2"></div>
 
         <!-- 日時・場所のご案内 -->
-        <section class="my-16 fade-in delay-3">
-            <h2 class="font-noto-serif text-3xl font-bold text-accent mb-10 text-center tracking-wider">INFORMATION</h2>
-            <div class="card rounded-2xl p-8 md:p-10">
+        <section class="my-12 sm:my-16 fade-in delay-3">
+            <h2 class="font-noto-serif text-2xl sm:text-3xl font-bold text-accent mb-8 sm:mb-10 text-center tracking-wider">INFORMATION</h2>
+            <!-- スマホ用のパディングを調整 -->
+            <div class="card rounded-2xl p-6 sm:p-8 md:p-10">
                 <div class="space-y-8">
                     <!-- 日時 -->
                     <div class="flex items-start">
-                        <div class="w-8 h-8 mr-6 mt-1 text-accent">
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 mr-4 sm:mr-6 mt-1 text-accent flex-shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0h18M12 12.75h.008v.008H12v-.008Z" /></svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-xl text-accent">日時</h3>
-                            <p class="text-lg mt-2">2025年11月9日 (日曜日)</p>
-                            <p class="text-md mt-1">受付: 12:30</p>
-                            <p class="text-md mt-1">挙式: 13:00</p>
-                            <p class="text-md mt-1">披露宴: 14:00</p>
+                            <h3 class="font-bold text-lg sm:text-xl text-accent">日時</h3>
+                            <p class="text-base sm:text-lg mt-2">2025年11月9日 (日曜日)</p>
+                            <p class="text-sm sm:text-base mt-1">受付: 12:30</p>
+                            <p class="text-sm sm:text-base mt-1">挙式: 13:00</p>
+                            <p class="text-sm sm:text-base mt-1">披露宴: 14:00</p>
                         </div>
                     </div>
                     <!-- 場所 -->
                     <div class="flex items-start">
-                         <div class="w-8 h-8 mr-6 mt-1 text-accent">
+                         <div class="w-7 h-7 sm:w-8 sm:h-8 mr-4 sm:mr-6 mt-1 text-accent flex-shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-xl text-accent">場所</h3>
-                            <p class="text-lg mt-2">ホテル コリント</p>
-                            <p class="text-md mt-1 text-gray-500">〒389-0113 長野県北佐久郡軽井沢町大字発地348-40</p>
-                            <p class="text-md mt-1 text-gray-500">JR軽井沢駅よりお車で約10分</p>
+                            <h3 class="font-bold text-lg sm:text-xl text-accent">場所</h3>
+                            <p class="text-base sm:text-lg mt-2">ホテル コリント</p>
+                            <p class="text-sm sm:text-base mt-1 text-gray-500">〒389-0113 長野県北佐久郡軽井沢町大字発地348-40</p>
+                            <p class="text-sm sm:text-base mt-1 text-gray-500">JR軽井沢駅よりお車で約10分</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +183,7 @@
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.782042079232!2d138.622731!3d36.296103999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c2d112874e825%3A0x9c89f47162fdc5c1!2sHOTEL%20CORINTHE(%E3%83%9B%E3%83%86%E3%83%AB%E3%82%B3%E3%83%AA%E3%83%B3%E3%83%88)!5e0!3m2!1sja!2sjp!4v1690269150000!5m2!1sja!2sjp" 
                         width="100%" 
-                        height="350" 
+                        height="300" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -187,28 +194,28 @@
         </section>
 
         <!-- 区切り線 -->
-        <div class="border-t-2 border-dotted border-accent/40 my-20 fade-in delay-4"></div>
+        <div class="border-t-2 border-dotted border-accent/40 my-12 sm:my-20 fade-in delay-4"></div>
 
         <!-- 出欠のご連絡 -->
-        <section class="text-center my-16 fade-in delay-4">
-            <h2 class="font-noto-serif text-3xl font-bold text-accent mb-6 tracking-wider">RSVP</h2>
-            <p class="text-lg leading-relaxed">
+        <section class="text-center my-12 sm:my-16 fade-in delay-4">
+            <h2 class="font-noto-serif text-2xl sm:text-3xl font-bold text-accent mb-6 sm:mb-8 tracking-wider">RSVP</h2>
+            <p class="text-base sm:text-lg leading-relaxed">
                 誠に恐れ入りますが 準備の都合上<br>
                 <strong class="text-accent">10月1日(水)</strong>までにご返信くださいますよう<br>
                 お願い申し上げます
             </p>
-            <a href="#" class="mt-8 inline-block bg-accent text-white font-bold py-4 px-12 rounded-full shadow-lg hover:bg-accent-dark transition-all transform hover:scale-105">
+            <a href="#" class="mt-8 inline-block bg-accent text-white font-bold py-3 px-10 sm:py-4 sm:px-12 rounded-full shadow-lg hover:bg-accent-dark transition-all transform hover:scale-105">
                 出欠席フォームはこちら
             </a>
         </section>
 
         <!-- 区切り線 -->
-        <div class="border-t-2 border-dotted border-accent/40 my-20 fade-in delay-5"></div>
+        <div class="border-t-2 border-dotted border-accent/40 my-12 sm:my-20 fade-in delay-5"></div>
 
         <!-- フォトギャラリー -->
-        <section class="my-16 fade-in delay-5">
-            <h2 class="font-noto-serif text-3xl font-bold text-accent mb-10 text-center tracking-wider">PHOTO GALLERY</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <section class="my-12 sm:my-16 fade-in delay-5">
+            <h2 class="font-noto-serif text-2xl sm:text-3xl font-bold text-accent mb-8 sm:mb-10 text-center tracking-wider">PHOTO GALLERY</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4">
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
                     <img src="https://placehold.co/600x600/CFC3B9/FFFFFF?text=Photo+1" alt="二人の写真1" class="w-full h-auto">
                 </div>
