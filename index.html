@@ -7,8 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
+        /* テーマカラー設定 */
         :root {
             --color-bg: #F9F7F3; /* 温かみのあるオフホワイト */
             --color-text: #6B5B52; /* 柔らかいブラウン */
@@ -27,7 +28,8 @@
             font-family: 'Noto Serif JP', serif;
         }
         .font-handwriting {
-            font-family: 'Alice', serif;
+            /* フォントをエレガントな 'Great Vibes' に変更 */
+            font-family: 'Great Vibes', cursive;
         }
         .cover-image {
             position: relative; /* 疑似要素の配置のため */
@@ -41,7 +43,7 @@
             background-image: url('https://i.imgur.com/RPueAWB.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: fixed; /* PCでは背景を固定 */
             z-index: -1; /* コンテンツの背面に配置 */
             opacity: 0;
             animation: fadeInBg 2s ease-in forwards; /* 背景をフェードイン */
@@ -89,14 +91,21 @@
         .delay-3 { animation-delay: 0.6s; }
         .delay-4 { animation-delay: 0.8s; }
         .delay-5 { animation-delay: 1s; }
+
+        /* スマホ表示の最適化 */
+        @media (max-width: 768px) {
+            .cover-image::before {
+                background-attachment: scroll; /* スマホでは背景の固定を解除してバグを防ぐ */
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- メインビジュアル -->
     <header class="cover-image h-screen w-full flex flex-col items-center justify-center text-white text-center shadow-lg">
-        <div class="bg-black bg-opacity-30 p-8 md:p-12 fade-in">
-            <h1 class="font-handwriting text-6xl md:text-7xl" style="color: #FFF; line-height: 1.2;">Our Wedding Day</h1>
+        <div class="bg-black bg-opacity-30 p-8 md:p-12 rounded-lg fade-in">
+            <h1 class="font-handwriting text-7xl md:text-8xl" style="color: #FFF; font-weight: 400;">Our Wedding Day</h1>
             <p class="mt-4 text-2xl md:text-3xl font-noto-serif">Kyosuke & Natsumi</p>
             <p class="mt-2 text-lg font-noto-serif">2025.11.09</p>
         </div>
@@ -165,7 +174,7 @@
                 <!-- 地図 -->
                 <div class="mt-8 rounded-lg overflow-hidden shadow-md border border-accent/20">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12874.52631584284!2d138.6042450478951!3d36.34584281395104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dcc5f3554b5a7%3A0x36b1a7424663076f!2z6Lu95LqV5rKi6aeF!5e0!3m2!1sja!2sjp!4v1693988000000!5m2!1sja!2sjp" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.782042079232!2d138.622731!3d36.296103999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c2d112874e825%3A0x9c89f47162fdc5c1!2sHOTEL%20CORINTHE(%E3%83%9B%E3%83%86%E3%83%AB%E3%82%B3%E3%83%AA%E3%83%B3%E3%83%88)!5e0!3m2!1sja!2sjp!4v1690269150000!5m2!1sja!2sjp" 
                         width="100%" 
                         height="350" 
                         style="border:0;" 
