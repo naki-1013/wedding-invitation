@@ -40,7 +40,8 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('https://i.imgur.com/RPueAWB.jpg');
+            /* 画像のパスをリポジトリ内の相対パスに変更 */
+            background-image: url('resources/top_kv.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* PCでは背景を固定 */
@@ -216,23 +217,24 @@
         <section class="my-12 sm:my-16 fade-in delay-5">
             <h2 class="font-noto-serif text-2xl sm:text-3xl font-bold text-accent mb-8 sm:mb-10 text-center tracking-wider">PHOTO GALLERY</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4">
+                <!-- 画像のパスをリポジトリ内の相対パスに変更 -->
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/CFC3B9/FFFFFF?text=Photo+1" alt="二人の写真1" class="w-full h-auto">
+                    <img src="resources/photo1.jpg" alt="二人の写真1" class="w-full h-auto">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/B0A092/FFFFFF?text=Photo+2" alt="二人の写真2" class="w-full h-auto">
+                    <img src="resources/photo2.jpg" alt="二人の写真2" class="w-full h-auto">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/A09184/FFFFFF?text=Photo+3" alt="二人の写真3" class="w-full h-auto">
+                    <img src="resources/photo3.jpg" alt="二人の写真3" class="w-full h-auto">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/918276/FFFFFF?text=Photo+4" alt="二人の写真4" class="w-full h-auto">
+                    <img src="resources/photo4.jpg" alt="二人の写真4" class="w-full h-auto">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/817368/FFFFFF?text=Photo+5" alt="二人の写真5" class="w-full h-auto">
+                    <img src="resources/photo5.jpg" alt="二人の写真5" class="w-full h-auto">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform">
-                    <img src="https://placehold.co/600x600/72645A/FFFFFF?text=Photo+6" alt="二人の写真6" class="w-full h-auto">
+                    <img src="resources/photo6.jpg" alt="二人の写真6" class="w-full h-auto">
                 </div>
             </div>
         </section>
