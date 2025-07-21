@@ -7,7 +7,7 @@ DTSTAMP:20250721T120000Z
 DTSTART:20251109T033000Z
 DTEND:20251109T080000Z
 SUMMARY:Kyosuke & Natsumi's Wedding
-DESCRIPTION:恭輔 & 菜摘のウェディングパーティでお待ちしております。
-LOCATION:ホテル コリント, 〒389-0113 長野県北佐久郡軽井沢町大字発地348-40
+DESCRIPTION:恭輔 & 菜摘のウェディングパーティでお待ちしております。\n\n場所: ホテル コリント\n住所: 〒389-0113 長野県北佐久郡軽井沢町大字発地348-40
+LOCATION:ホテル コリント
 END:VEVENT
 END:VCALENDAR
