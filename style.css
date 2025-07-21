@@ -1,0 +1,90 @@
+/* テーマカラー設定 */
+:root {
+    --color-bg: #F9F7F3; /* 温かみのあるオフホワイト */
+    --color-text: #6B5B52; /* 柔らかいブラウン */
+    --color-accent: #B0A092; /* 優雅なトープカラー */
+    --color-accent-dark: #9A8A7D; /* ボタンホバー用の濃いトープ */
+}
+
+body {
+    font-family: 'Shippori Mincho', serif;
+    /* 繊細な紙のテクスチャ */
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+.font-noto-serif {
+    font-family: 'Noto Serif JP', serif;
+}
+.font-title {
+    /* メインタイトルのフォントを 'Alice' に変更 */
+    font-family: 'Alice', serif;
+}
+.cover-image {
+    position: relative; /* 疑似要素の配置のため */
+    overflow: hidden; /* コンテンツのはみ出し防止 */
+}
+/* 背景画像用の疑似要素を作成し、フェードインさせる */
+.cover-image::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* 画像のパスをリポジトリ内の相対パスに変更 */
+    background-image: url('resources/images/top_kv.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* PCでは背景を固定 */
+    z-index: -1; /* コンテンツの背面に配置 */
+    opacity: 0;
+    animation: fadeInBg 2s ease-in forwards; /* 背景をフェードイン */
+}
+.text-accent {
+    color: var(--color-accent);
+}
+.bg-accent {
+    background-color: var(--color-accent);
+}
+.hover\:bg-accent-dark:hover {
+    background-color: var(--color-accent-dark);
+}
+.border-accent {
+    border-color: var(--color-accent);
+}
+.card {
+    background-color: rgba(249, 247, 243, 0.9);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(176, 160, 146, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* アニメーション定義 */
+@keyframes fadeInBg { /* 背景画像用のフェードイン */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* アニメーションの遅延設定 */
+.cover-image .fade-in {
+    animation-delay: 1.5s; /* 背景表示後にテキストを表示 */
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+
+/* スマホ表示の最適化 */
+@media (max-width: 768px) {
+    .cover-image::before {
+        background-attachment: scroll; /* スマホでは背景の固定を解除してバグを防ぐ */
+    }
+}
