@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kyosuke and Natsumi//Wedding Invitation//JA
+BEGIN:VEVENT
+UID:20251109-wedding-kn@your-domain.com
+DTSTAMP:20250721T120000Z
+DTSTART:20251109T033000Z
+DTEND:20251109T080000Z
+SUMMARY:Kyosuke & Natsumi's Wedding
+DESCRIPTION:恭輔 & 菜摘のウェディングパーティでお待ちしております。
+LOCATION:ホテル コリント, 〒389-0113 長野県北佐久郡軽井沢町大字発地348-40
+END:VEVENT
+END:VCALENDAR
